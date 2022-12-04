@@ -1,3 +1,4 @@
+import day.four.CampCleanup
 import day.one.CountElvesCalories
 import day.three.RucksackReorganization
 import day.two.RockPaperScissors
@@ -26,4 +27,8 @@ fun main() {
 
     // Day 4
     println("******************** DAY 4 ********************")
+    val countFullyContainingAssignments = CampCleanup().countFullyContainsOthers("src/main/kotlin/day/four/Input")
+    println("There are  $countFullyContainingAssignments pairs that fully containing each other.")
+    val countPartiallyContainingAssignments = CampCleanup().countPartiallyContainsOthers("src/main/kotlin/day/four/Input")
+    println("There are  $countPartiallyContainingAssignments pairs that partially containing each other.")
 }
