@@ -55,10 +55,6 @@ class CampCleanup {
                 return true
             else if(startFirst in startSecond..endSecond)
                 return true
-            else if (startFirst in startSecond..endSecond)
-                return true
-            else if(startSecond in startFirst..endFirst)
-                return true
             return false
         }
     }

@@ -1,5 +1,7 @@
+import day.five.SupplyStacks
 import day.four.CampCleanup
 import day.one.CountElvesCalories
+import day.six.TuningTrouble
 import day.three.RucksackReorganization
 import day.two.RockPaperScissors
 
@@ -31,4 +33,19 @@ fun main() {
     println("There are  $countFullyContainingAssignments pairs that fully containing each other.")
     val countPartiallyContainingAssignments = CampCleanup().countPartiallyContainsOthers("src/main/kotlin/day/four/Input")
     println("There are  $countPartiallyContainingAssignments pairs that partially containing each other.")
+
+    // Day 5
+    println("******************** DAY 5 ********************")
+    // PTWLTDSJV
+    val upperCrates = SupplyStacks().getUpperCrates("src/main/kotlin/day/five/Input", false)
+    println("This are the upper crates $upperCrates.")
+    val upperCratesCrateMover9001 = SupplyStacks().getUpperCrates("src/main/kotlin/day/five/Input", true)
+    println("This are the upper crates $upperCratesCrateMover9001 with Crate-Mover-9001.")
+
+    // Day 6
+    println("******************** DAY 6 ********************")
+    val indexOfEndingMarker = TuningTrouble().getEndOfStartOfPacketMaker("src/main/kotlin/day/six/Input", 4)
+    println("The Packet-Marker ends with an index of $indexOfEndingMarker.")
+    val message = TuningTrouble().getEndOfStartOfPacketMaker("src/main/kotlin/day/six/Input", 14)
+    println("The Message-Marker ends with an  index of $message.")
 }
