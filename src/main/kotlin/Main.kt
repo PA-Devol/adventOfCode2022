@@ -1,6 +1,7 @@
 import day.five.SupplyStacks
 import day.four.CampCleanup
 import day.one.CountElvesCalories
+import day.seven.NoSpaceLeftOnDevice
 import day.six.TuningTrouble
 import day.three.RucksackReorganization
 import day.two.RockPaperScissors
@@ -48,4 +49,11 @@ fun main() {
     println("The Packet-Marker ends with an index of $indexOfEndingMarker.")
     val message = TuningTrouble().getEndOfStartOfPacketMaker("src/main/kotlin/day/six/Input", 14)
     println("The Message-Marker ends with an  index of $message.")
+
+    // Day 7
+    println("******************** DAY 7 ********************")
+    val sumOfDirs = NoSpaceLeftOnDevice().getSumOfAllDirsSmallerThan("src/main/kotlin/day/seven/Input", 100000)
+    println("The sum of all dirs <= 100000 is $sumOfDirs.")
+    val closestDirTo30000000 = NoSpaceLeftOnDevice().getSumOfDirClosestToSize("src/main/kotlin/day/seven/Input", 30000000)
+    println("The closest dir to a size of 30000000 has a size of $closestDirTo30000000.")
 }
