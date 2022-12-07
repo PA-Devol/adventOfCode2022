@@ -37,7 +37,6 @@ fun main() {
 
     // Day 5
     println("******************** DAY 5 ********************")
-    // PTWLTDSJV
     val upperCrates = SupplyStacks().getUpperCrates("src/main/kotlin/day/five/Input", false)
     println("This are the upper crates $upperCrates.")
     val upperCratesCrateMover9001 = SupplyStacks().getUpperCrates("src/main/kotlin/day/five/Input", true)
@@ -54,6 +53,6 @@ fun main() {
     println("******************** DAY 7 ********************")
     val sumOfDirs = NoSpaceLeftOnDevice().getSumOfAllDirsSmallerThan("src/main/kotlin/day/seven/Input", 100000)
     println("The sum of all dirs <= 100000 is $sumOfDirs.")
-    val sizeOfDirToBeDeleted = NoSpaceLeftOnDevice().getSumOfDirToBeDeleted("src/main/kotlin/day/seven/Input", 40000000)
+    val sizeOfDirToBeDeleted = NoSpaceLeftOnDevice().getDirSizeToFreeUpSpace("src/main/kotlin/day/seven/Input", 40000000)
     println("The size of the dir that has to be deleted to have enough space for an update is $sizeOfDirToBeDeleted.")
 }

@@ -7,10 +7,9 @@ class NoSpaceLeftOnDevice {
     fun getSumOfAllDirsSmallerThan(fileName: String, size: Long): Long =
         getDir(Files.readAllLines(Paths.get(fileName))).getSumOfDirsSmallerThan(size)
 
-    fun getSumOfDirToBeDeleted(fileName: String, maxUsed: Long): Long {
+    fun getDirSizeToFreeUpSpace(fileName: String, maxUsed: Long): Long {
         val dir = getDir(Files.readAllLines(Paths.get(fileName)))
-        return dir.getDirSizesBiggerThan(dir.getSize() - maxUsed, mutableListOf())
-            .minOrNull()!!
+        return dir.getDirSizeToFreeUpSpace(dir.getSize() - maxUsed, mutableListOf())
     }
 
 
@@ -63,12 +62,12 @@ class NoSpaceLeftOnDevice {
                 subDirectories.sumOf { it.getSumOfDirsSmallerThan(size) }
             }
 
-        fun getDirSizesBiggerThan(size: Long, mutableList: MutableList<Long>): MutableList<Long> {
-            if (getSize() >= size) {
+        fun getDirSizeToFreeUpSpace(freeUpSpace: Long, mutableList: MutableList<Long>): Long {
+            if (getSize() >= freeUpSpace) {
                 mutableList.add(getSize())
             }
-            subDirectories.map { it.getDirSizesBiggerThan(size, mutableList) }
-            return mutableList
+            subDirectories.map { it.getDirSizeToFreeUpSpace(freeUpSpace, mutableList) }
+            return mutableList.minOrNull()!!
         }
 
     }
