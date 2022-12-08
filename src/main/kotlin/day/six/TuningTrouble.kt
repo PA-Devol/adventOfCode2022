@@ -6,20 +6,14 @@ import java.nio.file.Paths
 
 class TuningTrouble {
 
-    fun getEndOfStartOfPacketMaker(fileName: String, windowSize: Int): Int {
-        val communicationInput = Files.readAllLines(Paths.get(fileName))
+    fun getEndOfStartOfPacketMaker(fileName: String, windowSize: Int): Int =
+        getIndexOfEndingPacketMarker(fileName.let { Files.readAllLines(Paths.get(it)) }[0], windowSize)
 
-        return getIndexOfEndingPacketMarker(communicationInput[0], windowSize)
-    }
 
     private fun getIndexOfEndingPacketMarker(msg: String, markerSize: Int): Int {
         for (i in msg.indices)
             if (i + markerSize < msg.length) {
-                val set = hashSetOf<Char>()
-
-                for (j in 0 until markerSize) {
-                    set.add(msg[i + j])
-                }
+                val set = msg.substring(i, i + markerSize).toCharArray().toSet()
                 if (set.size == markerSize) {
                     return i + markerSize
                 }
