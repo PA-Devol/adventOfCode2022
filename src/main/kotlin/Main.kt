@@ -1,3 +1,4 @@
+import day.eight.TreetopTreeHouse
 import day.five.SupplyStacks
 import day.four.CampCleanup
 import day.one.CountElvesCalories
@@ -55,4 +56,12 @@ fun main() {
     println("The sum of all dirs <= 100000 is $sumOfDirs.")
     val sizeOfDirToBeDeleted = NoSpaceLeftOnDevice().getDirSizeToFreeUpSpace("src/main/kotlin/day/seven/Input", 40000000)
     println("The size of the dir that has to be deleted to have enough space for an update is $sizeOfDirToBeDeleted.")
+
+    // Day 8
+    println("******************** DAY 8 ********************")
+    val countVisibleTrees = TreetopTreeHouse().countVisibleTrees("src/main/kotlin/day/eight/Input")
+    println("There are $countVisibleTrees trees visible.")
+    val highestScenicScore = TreetopTreeHouse().getHighestScenicScore("src/main/kotlin/day/eight/Input")
+    println("The highest scenic score is $highestScenicScore.")
+
 }
