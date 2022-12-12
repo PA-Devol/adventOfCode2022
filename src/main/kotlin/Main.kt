@@ -1,6 +1,7 @@
 import day.eight.TreetopTreeHouse
 import day.five.SupplyStacks
 import day.four.CampCleanup
+import day.nine.RopeBridge
 import day.one.CountElvesCalories
 import day.seven.NoSpaceLeftOnDevice
 import day.six.TuningTrouble
@@ -64,4 +65,8 @@ fun main() {
     val highestScenicScore = TreetopTreeHouse().getHighestScenicScore("src/main/kotlin/day/eight/Input")
     println("The highest scenic score is $highestScenicScore.")
 
+    // Day 9
+    println("******************** DAY 9 ********************")
+    val countUniqueSteps = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input")
+    println("There are $countUniqueSteps positions that the tail of the rope visit at least once.")
 }
