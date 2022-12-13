@@ -69,4 +69,7 @@ fun main() {
     println("******************** DAY 9 ********************")
     val countUniqueSteps = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input")
     println("There are $countUniqueSteps positions that the tail of the rope visit at least once.")
+
+    val countUniqueSteps10 = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input", 9)
+    println("There are $countUniqueSteps10 positions that the nine tails of the rope visit at least once.")
 }
