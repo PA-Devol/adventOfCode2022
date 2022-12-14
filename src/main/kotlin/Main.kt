@@ -7,6 +7,7 @@ import day.seven.NoSpaceLeftOnDevice
 import day.six.TuningTrouble
 import day.three.RucksackReorganization
 import day.two.RockPaperScissors
+import day.ten.CathodeRayTube
 
 fun main() {
     // DAY 1
@@ -34,7 +35,8 @@ fun main() {
     println("******************** DAY 4 ********************")
     val countFullyContainingAssignments = CampCleanup().countFullyContainsOthers("src/main/kotlin/day/four/Input")
     println("There are  $countFullyContainingAssignments pairs that fully containing each other.")
-    val countPartiallyContainingAssignments = CampCleanup().countPartiallyContainsOthers("src/main/kotlin/day/four/Input")
+    val countPartiallyContainingAssignments =
+        CampCleanup().countPartiallyContainsOthers("src/main/kotlin/day/four/Input")
     println("There are  $countPartiallyContainingAssignments pairs that partially containing each other.")
 
     // Day 5
@@ -55,7 +57,8 @@ fun main() {
     println("******************** DAY 7 ********************")
     val sumOfDirs = NoSpaceLeftOnDevice().getSumOfAllDirsSmallerThan("src/main/kotlin/day/seven/Input", 100000)
     println("The sum of all dirs <= 100000 is $sumOfDirs.")
-    val sizeOfDirToBeDeleted = NoSpaceLeftOnDevice().getDirSizeToFreeUpSpace("src/main/kotlin/day/seven/Input", 40000000)
+    val sizeOfDirToBeDeleted =
+        NoSpaceLeftOnDevice().getDirSizeToFreeUpSpace("src/main/kotlin/day/seven/Input", 40000000)
     println("The size of the dir that has to be deleted to have enough space for an update is $sizeOfDirToBeDeleted.")
 
     // Day 8
@@ -71,4 +74,9 @@ fun main() {
     println("There are $countUniqueSteps positions that the tail of the rope visit at least once.")
     val countUniqueSteps10 = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input", 9)
     println("There are $countUniqueSteps10 positions that the nine tails of the rope visit at least once.")
+
+    // Day 10
+    println("******************** DAY 10 ********************")
+    val countNCircles = CathodeRayTube().getSumOfNRuns("src/main/kotlin/day/ten/Input", 20, 60, 100, 140, 180, 220)
+    println("There sum of the  20th, 60th, 100th, 140th, 180th, and 220th cycles is $countNCircles.")
 }
