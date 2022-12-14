@@ -11,9 +11,9 @@ import day.two.RockPaperScissors
 fun main() {
     // DAY 1
     println("******************** DAY 1 ********************")
-    val topCalories =  CountElvesCalories().getMostCarriedCalories("src/main/kotlin/day/one/ElvesCalories")
+    val topCalories = CountElvesCalories().getMostCarriedCalories("src/main/kotlin/day/one/ElvesCalories")
     println("The strongest Elf is carrying $topCalories calories!")
-    val top3Calories =  CountElvesCalories().getCaloriesOfNTopElves("src/main/kotlin/day/one/ElvesCalories" , 3)
+    val top3Calories = CountElvesCalories().getCaloriesOfNTopElves("src/main/kotlin/day/one/ElvesCalories", 3)
     println("The strongest 3 Elves are carrying $top3Calories calories together!")
 
     // Day 2
@@ -69,7 +69,6 @@ fun main() {
     println("******************** DAY 9 ********************")
     val countUniqueSteps = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input")
     println("There are $countUniqueSteps positions that the tail of the rope visit at least once.")
-
     val countUniqueSteps10 = RopeBridge().countUniqueFieldOfTail("src/main/kotlin/day/nine/Input", 9)
     println("There are $countUniqueSteps10 positions that the nine tails of the rope visit at least once.")
 }
