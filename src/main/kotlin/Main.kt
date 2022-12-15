@@ -79,4 +79,11 @@ fun main() {
     println("******************** DAY 10 ********************")
     val countNCircles = CathodeRayTube().getSumOfNRuns("src/main/kotlin/day/ten/Input", 20, 60, 100, 140, 180, 220)
     println("There sum of the  20th, 60th, 100th, 140th, 180th, and 220th cycles is $countNCircles.")
+    val renderedImage = CathodeRayTube().getRenderedImage("src/main/kotlin/day/ten/Input", 40, 80, 120, 160, 200, 240)
+    println("rendered Image:")
+    renderedImage.forEach{println(it)}
+
+    // Day 11
+    println("******************** DAY 11 ********************")
+
 }
